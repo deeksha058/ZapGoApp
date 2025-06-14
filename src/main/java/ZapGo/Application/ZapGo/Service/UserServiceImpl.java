@@ -44,7 +44,7 @@ public class UserServiceImpl implements UserService {
         mailMessage.setTo(user.getEmail());
         mailMessage.setSubject("Complete Registration!");
         mailMessage.setText("To confirm your account, please click here : "
-                +"http://localhost:8082/auth/confirm-account?token="+confirmationToken.getConfirmationToken());
+                +"https://zapgoapp-production/auth/confirm-account?token="+confirmationToken.getConfirmationToken());
 
         System.out.println(confirmationToken.getConfirmationToken());
         emailService.sendEmail(mailMessage);
